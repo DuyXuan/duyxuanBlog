@@ -1,0 +1,129 @@
+/*header*/
+header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0; 
+  z-index: 100;
+  overflow: hidden;
+  box-shadow: 0 1px 2px lightgray;
+  
+  
+}
+.main-header {
+  height: 60px;
+  background-color: white;
+}
+.main-header .row {
+  justify-content: space-between;
+}
+
+/*intro tittle and logo*/
+.main-header__intro {
+  display: flex;
+}
+.main-header__intro a{
+  text-decoration: none;
+}
+.intro-logo > img {
+  width: 60px;
+  height: 63px;
+
+  margin-top: -5px;
+}
+.intro-tittle > p {
+  margin-left: 20px;
+  margin-top: 15px;
+
+  font-size: 2.1rem;
+  font-family: "Marck Script", cursive;
+  font-weight: bold;
+}
+
+/*nav bar items*/
+
+.nav__link a:hover {
+  background-color: lightgray;
+  color: white;
+}
+
+.nav__link{
+  display: flex;
+  
+  height: 100%;;
+}
+.nav__link > a{
+  text-decoration: none;
+  border-left: 1px solid lightgrey;
+  text-align: center;
+
+  width: 105px;
+  height: auto;
+
+  padding-top: 20px;
+
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #979797;
+}
+
+.nav-btn {
+  margin-top: 13px;
+
+  color: lightgrey;
+}
+
+.fas {
+  margin-right: 5px;
+}
+.nav__overlay{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+
+.nav-mobile-res{
+  display: flex;
+  flex-direction: column;
+  background-color:black;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  width: 300px;
+
+  padding-top: 50px;
+ 
+  transform: translateX(100%);
+  transition: all 0.5s;
+}
+.nav-mobile-res >a{
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  line-height: 30px;
+
+  margin: 10px 20px;
+}
+.nav-mobile__close{
+  color: white;
+
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+}
+.nav-btn-2{
+  color: white;
+
+  position: absolute;
+  top: 0.5rem;
+  left: 1rem;
+}
+

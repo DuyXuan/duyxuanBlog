@@ -1,0 +1,13 @@
+.page-footer {
+  height: 50px;
+  background-color: #C5BEBE;
+}
+.page-footer > .container > .row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.page-footer > .footer-info {
+  margin: auto 50px;
+}
