@@ -15,7 +15,7 @@
 .intro .row {
   height: 100vh;
 
-  background-image: url(../Image/intro0.jpg);
+  background-image: url(../../Image/intro0.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
