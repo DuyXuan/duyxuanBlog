@@ -1,4 +1,4 @@
-// Menu Button
+// Menu Button (for responsive)
 var menuBar = document.querySelector(".nav-btn");
 menuBar.onclick = function () {
   document.querySelector(".nav-mobile-res").style.transform = "translateX(0)";
@@ -34,7 +34,7 @@ function time() {
 }
 setInterval(time, 1000);
 
-//Scroll up menu
+//Scroll top btn
 var scrollTop = document.querySelector(".scroll-btn");
 window.onscroll = function () {
   scrollToTop();
@@ -61,7 +61,6 @@ var input = document.querySelectorAll(".form__input");
 var submitBtn = document.querySelector(".submit-btn");
 var errorMess = document.querySelectorAll(".error-message");
 
-//
 var nameInput = document.querySelector(".input__name");
 var phoneInput = document.querySelector(".input__phone");
 var emailInput = document.querySelector(".input__email");
