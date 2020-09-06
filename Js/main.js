@@ -1,4 +1,4 @@
-// Menu Button (for responsive)
+//header menu Button (when responsive)
 var menuBar = document.querySelector(".nav-btn");
 menuBar.onclick = function () {
   document.querySelector(".nav-mobile-res").style.transform = "translateX(0)";
@@ -16,7 +16,6 @@ function time() {
   var time = new Date();
   var currentTime =
     time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
-
   if (time.getHours < 12) {
     currentTime += " AM";
   } else {
@@ -34,7 +33,43 @@ function time() {
 }
 setInterval(time, 1000);
 
-//Scroll top btn
+//Display top 3 post in news section with javascript(create for practice javascript using innerHTML and Object)
+var postDetail = document.querySelectorAll(".post-detail");
+for (var i = 0; i < 3; i++) {
+  postDetail[i].innerHTML = `<a href="">  
+  <div class="post-detail__image">
+  <img src="" alt="" />
+  </div>
+  <div class="post-detail__tittle"><p>abc</p></div>
+  <div class="post-detail__desc">
+  <p>
+  </p>
+  </div>
+  </a>`;
+}
+
+function news(tittle, description, imageUrl) {
+  this.tittle = tittle;
+  this.description = description;
+  this.imageUrl = imageUrl;
+}
+var post = new news(
+  "Post 1",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit." +
+    "Quaerat soluta in necessitatibus quam!" +
+    "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
+  "../Image/news.png"
+);
+var postImage = document.querySelectorAll(".post-detail__image > img");
+var postDescription = document.querySelectorAll(".post-detail__desc >p");
+var postTittle = document.querySelectorAll(".post-detail__tittle>p");
+for (var i = 0; i < 3; i++) {
+  postImage[i].src = post.imageUrl;
+  postDescription[i].innerText = post.description;
+  postTittle[i].innerText = post.tittle;
+}
+
+//Scroll to top btn
 var scrollTop = document.querySelector(".scroll-btn");
 window.onscroll = function () {
   scrollToTop();
@@ -45,10 +80,11 @@ scrollTop.onclick = function () {
   document.documentElement.scrollTop = 0;
 };
 
+//scroll button appear when the y position of time element(digital clock)< 0
 function scrollToTop() {
   if (
-    document.body.scrollTop > 600 ||
-    document.documentElement.scrollTop > 600
+    document.body.scrollTop >
+    document.querySelector(".time").getBoundingClientRect().top
   ) {
     scrollTop.style.display = "block";
   } else {
@@ -65,7 +101,6 @@ var nameInput = document.querySelector(".input__name");
 var phoneInput = document.querySelector(".input__phone");
 var emailInput = document.querySelector(".input__email");
 
-
 function checkEmpty() {
   for (var i = 0; i < input.length; i++) {
     if (input[i].value == "") {
@@ -76,13 +111,7 @@ function checkEmpty() {
     }
   }
 }
-function errorMessage(element){
-  var errorMess = "";
-if(element.test(nameInput)){
-  errorMess = "your name is too long";
-}
-return errorMess;
-}
+
 
 function checkName() {
   if (nameInput.value.length > 10) {
@@ -98,17 +127,53 @@ function checkPhone() {
 }
 
 function checkEmail() {
-  var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-  if (emailInput.value !="" && regex.test(emailInput.value)==false) {
+  var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (emailInput.value != "" && regex.test(emailInput.value) == false) {
     errorMess[1].style.display = "block";
     errorMess[1].textContent = "email not valid";
   }
 }
-
 
 submitBtn.addEventListener("click", function () {
   checkEmpty();
   checkName();
   checkPhone();
   checkEmail();
+});
+
+//onclick navigator link
+document.querySelectorAll(".nav__blog").forEach(function (element) {
+  element.onclick = function () {
+    window.scroll({
+      top: document.querySelector(".news").offsetTop,
+      behavior: "smooth",
+    });
+  };
+});
+
+document.querySelectorAll(".nav__about").forEach(function (element) {
+  element.onclick = function () {
+    window.scroll({
+      top: document.querySelector(".message-2").offsetTop,
+      behavior: "smooth",
+    });
+  };
+});
+
+document.querySelectorAll(".nav__gallery").forEach(function (element) {
+  element.onclick = function () {
+    window.scroll({
+      top: document.querySelector(".gallery").offsetTop,
+      behavior: "smooth",
+    });
+  };
+});
+
+document.querySelectorAll(".nav__contact").forEach(function (element) {
+  element.onclick = function () {
+    window.scroll({
+      top: document.querySelector(".contact").offsetTop,
+      behavior: "smooth",
+    });
+  };
 });
