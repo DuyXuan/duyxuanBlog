@@ -380,9 +380,12 @@
 .contact {
   background-color: #f7f7f7;
   margin-bottom: 100px;
+
+ 
 }
 .contact .row {
   justify-content: space-between;
+  
 }
 
 .contact .row-1 {
@@ -484,15 +487,9 @@ table {
   margin-top: 40px;
 }
 
-table tr td{
- 
-  padding: 10px 0;
-}
-
 input {
   width: 100%;
   height: 30px;
-  /* margin-bottom: 30px; */
 
   border: none;
   background-color: #eee;
@@ -502,11 +499,13 @@ input {
   border-bottom: 1px lightgray solid;
   font-size: 1rem;
 }
+
 .error-message{
   color: red;
-  display: none;
+  opacity: 0;
   font-size: 0.8rem;
 }
+
 .submit-btn {
   margin-top: 25px;
 
