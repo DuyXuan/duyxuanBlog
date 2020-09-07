@@ -286,7 +286,9 @@
 .fab {
   margin-top: 20px;
 }
-
+.skill-detail__name>h3{
+margin-bottom: -10px;
+}
 .skill-detail .col-1 {
   margin-right: 20px;
 }

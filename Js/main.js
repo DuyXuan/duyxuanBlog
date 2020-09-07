@@ -54,19 +54,34 @@ function news(tittle, description, imageUrl) {
   this.imageUrl = imageUrl;
 }
 var post = new news(
-  "Post 1",
+  "Tittle 1",
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit." +
     "Quaerat soluta in necessitatibus quam!" +
     "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
   "../Image/news.png"
 );
+var post2 = new news(
+  "Tittle 2",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit." +
+    "Quaerat soluta in necessitatibus quam!" +
+    "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
+  "../Image/news.png"
+);
+var post3 = new news(
+  "Tittle 3",
+  "Lorem ipsum dolor, sit amet consectetur adipisicing elit." +
+    "Quaerat soluta in necessitatibus quam!" +
+    "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
+  "../Image/news.png"
+);
+var postList = [post,post2,post3];
 var postImage = document.querySelectorAll(".post-detail__image > img");
 var postDescription = document.querySelectorAll(".post-detail__desc >p");
 var postTittle = document.querySelectorAll(".post-detail__tittle>p");
 for (var i = 0; i < 3; i++) {
-  postImage[i].src = post.imageUrl;
-  postDescription[i].innerText = post.description;
-  postTittle[i].innerText = post.tittle;
+  postImage[i].src = postList[i].imageUrl;
+  postDescription[i].innerText = postList[i].description;
+  postTittle[i].innerText = postList[i].tittle;
 }
 
 //Scroll to top btn
