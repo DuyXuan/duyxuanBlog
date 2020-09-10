@@ -1,4 +1,9 @@
-//header menu Button (when responsive)
+//Digital clock
+import digitalClock from '../Js/digitalClock.js';
+setInterval(digitalClock, 1000);
+
+
+//header responsive menu Button 
 var menuBar = document.querySelector(".nav-btn");
 menuBar.onclick = function () {
   document.querySelector(".nav-mobile-res").style.transform = "translateX(0)";
@@ -9,29 +14,6 @@ document.querySelector(".nav-mobile__close").onclick = function () {
     "translateX(100%)";
 };
 
-//Digital clock
-var span = document.querySelector(".time__clock> span");
-var timeMessage = document.querySelector(".time__message > span");
-function time() {
-  var time = new Date();
-  var currentTime =
-    time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
-  if (time.getHours < 12) {
-    currentTime += " AM";
-  } else {
-    currentTime += " PM";
-  }
-  span.textContent = currentTime;
-
-  if (time.getHours() >= 1 && time.getHours() < 12) {
-    timeMessage.textContent = "Good morning";
-  } else if (time.getHours() >= 12 && time.getHours() < 18) {
-    timeMessage.textContent = "Good Afternoon";
-  } else {
-    timeMessage.textContent = "Good evening";
-  }
-}
-setInterval(time, 1000);
 
 //Display top 3 post in news section with javascript(create for practice javascript using innerHTML and Object)
 var postDetail = document.querySelectorAll(".post-detail");
@@ -84,77 +66,19 @@ for (var i = 0; i < 3; i++) {
   postTittle[i].innerText = postList[i].tittle;
 }
 
-//Scroll to top btn
-var scrollTop = document.querySelector(".scroll-btn");
-window.onscroll = function () {
-  scrollToTop();
-};
 
-scrollTop.onclick = function () {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-};
 
-//scroll button appear when the y position of time element(digital clock)< 0
-function scrollToTop() {
-  if (
-    document.body.scrollTop >
-    document.querySelector(".time").getBoundingClientRect().top
-  ) {
-    scrollTop.style.display = "block";
-  } else {
-    scrollTop.style.display = "none";
-  }
-}
-
-//Form validate
-var input = document.querySelectorAll(".form__input");
+//form Validate
 var submitBtn = document.querySelector(".submit-btn");
-var errorMess = document.querySelectorAll(".error-message");
-
-var nameInput = document.querySelector(".input__name");
-var phoneInput = document.querySelector(".input__phone");
-var emailInput = document.querySelector(".input__email");
-
-function checkEmpty() {
-  for (var i = 0; i < input.length; i++) {
-    if (input[i].value == "") {
-      errorMess[i].style.opacity = 1;
-      errorMess[i].textContent = "please input this field";
-    } else {
-      errorMess[i].style.opacity = 0;
-    }
-  }
-}
-
-
-function checkName() {
-  if (nameInput.value.length > 10) {
-    errorMess[0].style.opacity = 1;
-    errorMess[0].textContent = "your name is too long";
-  }
-}
-function checkPhone() {
-  if (phoneInput.value.length > 12 || isNaN(phoneInput.value)) {
-    errorMess[2].style.opacity = 1;
-    errorMess[2].textContent = "phone must be number and < 12";
-  }
-}
-
-function checkEmail() {
-  var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (emailInput.value != "" && regex.test(emailInput.value) == false) {
-    errorMess[1].style.opacity = 1;
-    errorMess[1].textContent = "email not valid";
-  }
-}
-
+import  validator from '../Js/Validator.js';
 submitBtn.addEventListener("click", function () {
-  checkEmpty();
-  checkName();
-  checkPhone();
-  checkEmail();
+  validator.checkEmpty(),
+  validator.checkName(),
+  validator.checkEmail(),
+  validator.checkPhone()
 });
+
+
 
 //onclick navigator link
 document.querySelectorAll(".nav__blog").forEach(function (element) {
@@ -192,3 +116,26 @@ document.querySelectorAll(".nav__contact").forEach(function (element) {
     });
   };
 });
+
+//Scroll to top btn
+var scrollTop = document.querySelector(".scroll-btn");
+window.onscroll = function () {
+  scrollToTop();
+};
+
+scrollTop.onclick = function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+};
+
+//scroll button appear when the y position of time element(digital clock)< 0
+function scrollToTop() {
+  if (
+    document.body.scrollTop >
+    document.querySelector(".time").getBoundingClientRect().top
+  ) {
+    scrollTop.style.display = "block";
+  } else {
+    scrollTop.style.display = "none";
+  }
+}
