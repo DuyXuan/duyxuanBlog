@@ -71,10 +71,11 @@
 .time__message {
   width: 60%;
 
-  padding-top: 20px;
-  margin: 0 auto;
+  padding-top: 10px;
+  margin:  auto;
 
   text-align: center;
+  
 }
 
 .time__message > span {
@@ -96,7 +97,7 @@
 .time__clock {
   width: 60%;
 
-  padding-top: 20px;
+  padding-top: 10px;
   margin: 0 auto;
 
   text-align: center;
@@ -159,14 +160,22 @@
 
 .news__top3-post .row {
   justify-content: space-between;
+ padding-bottom: 30px;
 }
 
-.news__top3-post .col {
-  box-sizing: border-box;
+
+.news__top3-post .col:hover{
+  box-shadow: 1px;
+  
 }
 
 .news__top3-post .post-detail {
-  padding: 35px 35px;
+  padding: 35px;
+  transition: 0.5s;
+ 
+}
+.news__top3-post .post-detail:hover{
+  box-shadow: 1px 2px 22px -6px rgba(0,0,0,0.41);
 }
 
 .post-detail__tittle > p {
@@ -176,11 +185,9 @@
 
 .post-detail__image {
   text-align: center;
-
+  max-width: 430px;
   overflow: hidden;
-  
-  
- 
+  margin: auto;
 }
 .post-detail__image>img:hover{
   transform: scale(1.2);
@@ -220,7 +227,8 @@
   font-family: "Marck Script", cursive;
   font-size: 3rem;
 
-  padding-top: 50px;
+  padding-top: 60px;
+ 
 }
 
 .my-message .row {
@@ -574,7 +582,11 @@ input {
     text-align: center;
     width: 100%;
   }
-  
+  .intro__content{
+    font-size: 1rem;
+    left: 10%;
+    
+  }
   html {
     font-size: 12px !important;
   }
