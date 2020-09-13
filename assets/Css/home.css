@@ -1,8 +1,4 @@
 /*-------------------------------------SECTION: intro-----------------------------------------------*/
-.intro {
-  height: 90%;
-}
-
 @keyframes intro__img--fade {
   from {
     opacity: 0;
@@ -31,11 +27,11 @@
 
 @keyframes intro__content--move {
   0% {
-    top: 50px;
+    top: 10%;
     opacity: 0;
   }
   50% {
-    top: 50px;
+    top: 15%;
     opacity: 0;
   }
   100% {
@@ -234,27 +230,27 @@
 .my-message .row {
   justify-content: space-between;
 }
-
-.my-message .col-2 {
-  width: 30%;
-
-  border: 1px solid;
-  box-sizing: border-box;
+.my-message .col{
+  width: 100%;
 }
 
+
+.my-message__image{
+  text-align: center;
+}
 .my-message__image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
 
   border-radius: 5px; 
 }
 
 
-
 .my-message__detail {
-  width: 85%;
   margin-top: 10px;
-  width: 100%;
+  padding: 0 50px;
+  margin-bottom: 20px;
+ 
 }
 
 .my-message__detail > h2 {
@@ -390,8 +386,6 @@ margin-bottom: -10px;
 .contact {
   background-color: #f7f7f7;
   margin-bottom: 100px;
-
- 
 }
 .contact .row {
   justify-content: space-between;
@@ -608,6 +602,5 @@ input {
     font-size: 14px !important;
   }
 }
-/* Pc: width >=1024px */
-@media only screen and (min-width: 1024px) {
-}
+
+
