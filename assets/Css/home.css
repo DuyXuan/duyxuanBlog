@@ -85,7 +85,6 @@
 
 .time .col {
   padding: 30px 0;
-  box-sizing: border-box;
 
   color: white;
 }
@@ -108,9 +107,13 @@
 
 /*--------------------------------------------- SECTION: news--------------------------------------------------------- */
 .news .row-1 {
-  height: 200px;
-
+  min-height: 200px;
+  max-height: 300px;
+  color: white;
   padding-top: 50px;
+}
+.news .row-1 .col{
+  text-align: center;
 }
 
 .news .row-2 {
@@ -118,20 +121,14 @@
   top: -40px;
 }
 
-.news__intro {
-  justify-content: space-around;
-}
-
-.news__intro .col {
-  color: white;
-}
-
 .news a{
   text-decoration: none;
   color: #3d3b3b;
 }
-
-.news__intro .message > span {
+.news .row-1 .message{
+  margin-bottom: 10px;
+}
+.news .row-1 .message > span {
   font-size: 1.9rem;
   font-family: "Marck Script", cursive;
 }
@@ -141,12 +138,13 @@
   background-color: burlywood;
 
   color: aliceblue;
-  font-size: 1.5rem;
+  font-size: 25px;
+  
+  margin-bottom: 50px;
+  padding: 20px 30px;
 
-  margin-top: 10px;
-
-  width: 300px;
-  height: 70px;
+  width: 250px;
+  height: 65px;
 }
 
 .news__top3-post {
@@ -197,10 +195,6 @@
   transition: 0.5s;
 }
 
-
-
-
-
 /*-------------------------------------------- SECTION message -----------------------------------------*/
 .my-message {
   margin-bottom: 50px;
@@ -212,7 +206,7 @@
 }
 
 .my-message .row-1 {
-  height: 200px;
+  height: 190px;
 
   margin-bottom: 40px;
   text-align: center;
@@ -224,20 +218,20 @@
   font-size: 3rem;
 
   padding-top: 60px;
- 
 }
 
 .my-message .row {
   justify-content: space-between;
 }
+
 .my-message .col{
   width: 100%;
 }
 
-
 .my-message__image{
   text-align: center;
 }
+
 .my-message__image img {
   width: 100%;
   max-width: 550px;
@@ -245,12 +239,10 @@
   border-radius: 5px; 
 }
 
-
 .my-message__detail {
   margin-top: 10px;
   padding: 0 50px;
   margin-bottom: 20px;
- 
 }
 
 .my-message__detail > h2 {
@@ -290,9 +282,11 @@
 .fab {
   margin-top: 20px;
 }
+
 .skill-detail__name>h3{
 margin-bottom: -10px;
 }
+
 .skill-detail .col-1 {
   margin-right: 20px;
 }
@@ -387,6 +381,7 @@ margin-bottom: -10px;
   background-color: #f7f7f7;
   margin-bottom: 100px;
 }
+
 .contact .row {
   justify-content: space-between;
   
@@ -396,12 +391,14 @@ margin-bottom: -10px;
   height: 200px;
   margin-bottom: 50px;
 }
+
 .contact__social-link {
   display: flex;
   justify-content: center;
 
   width: 100%;
 }
+
 .contact__tittle{
   color:white;
   font-size: 1.7rem;
@@ -411,10 +408,12 @@ margin-bottom: -10px;
 
   padding-top: 30px;
 }
+
 .contact__tittle>p{
   margin: 0;
   padding: 0;
 }
+
 .contact__social-link .fab {
   color: white;
 
@@ -429,6 +428,7 @@ margin-bottom: -10px;
 
   padding: 30px;
 }
+
 .contact__intro .tittle > span {
   font-size: 2rem;
   font-weight: bold;
@@ -440,6 +440,7 @@ margin-bottom: -10px;
 
   border: 1px lightgray solid;
 }
+
 .info__detail {
   padding: 20px;
   padding-left: 0;
@@ -450,10 +451,6 @@ margin-bottom: -10px;
 .contact__info .info__tittle {
   font-size: 2rem;
   font-weight: bold;
-}
-
-.contact .col {
-  box-sizing: border-box;
 }
 
 ::placeholder {
@@ -534,15 +531,11 @@ input {
   display: flex;
   justify-content: space-between;
 
-  height: 250px;
+  min-height: 250px;
   
   color: white;
   
   padding-top: 30px;
-}
-
-.link .row .col {
-  width: 20%;
 }
 
 .link-social {
@@ -562,7 +555,7 @@ input {
 
 
 
-/*------------------------------------------------- Responsive ---------------------------------------*/
+/*--------------------------------------------- Responsive breakpoint ---------------------------------------*/
 
 /* Mobile: width <740px */
 @media only screen and (max-width: 739px) {
