@@ -40,21 +40,21 @@ var post = new news(
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit." +
     "Quaerat soluta in necessitatibus quam!" +
     "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
-  "../Image/news.png"
+  "Image/news.png"
 );
 var post2 = new news(
   "Tittle 2",
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit." +
     "Quaerat soluta in necessitatibus quam!" +
     "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
-  "../Image/news.png"
+  "Image/news.png"
 );
 var post3 = new news(
   "Tittle 3",
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit." +
     "Quaerat soluta in necessitatibus quam!" +
     "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
-  "../Image/news.png"
+  "Image/news.png"
 );
 var postList = [post,post2,post3];
 var postImage = document.querySelectorAll(".post-detail__image > img");
