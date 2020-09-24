@@ -46,7 +46,7 @@ a{
 /* facebook chat box */
 .facebook-chat{
   position: fixed;
-  right: 1%;
+  left: 1%;
   bottom: 1%;
 }
 
