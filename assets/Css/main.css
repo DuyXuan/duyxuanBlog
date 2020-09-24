@@ -34,18 +34,12 @@ a{
 
 .scroll-btn{
   position: fixed;
-  left: 1%;
+  right: 1%;
   bottom: 1%;
   display: none;
 
   cursor: pointer;
   animation: arrowMove 1s infinite;
-  
-}
-#fb-root{
-  position: fixed;
-  left: 1%;
-  bottom: 1%;
 }
 
 @keyframes arrowMove{
