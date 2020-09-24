@@ -3,12 +3,17 @@
 
   background-color: #C5BEBE;
 }
-.page-footer > .container > .row {
+
+.page-footer .row {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-}
 
+  height: 50px;
+}
+.page-footer .col-2{
+  text-align: right;
+}
 .page-footer > .footer-info {
   margin: auto 50px;
 }
