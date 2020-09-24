@@ -34,7 +34,7 @@ a{
 
 .scroll-btn{
   position: fixed;
-  right: 1%;
+  left: 1%;
   bottom: 1%;
   display: none;
 
@@ -42,14 +42,11 @@ a{
   animation: arrowMove 1s infinite;
   
 }
-
-/* facebook chat box */
-.facebook-chat{
+#fb-root{
   position: fixed;
   left: 1%;
   bottom: 1%;
 }
-
 
 @keyframes arrowMove{
  0%{opacity: 0.7;}
