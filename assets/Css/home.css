@@ -190,6 +190,34 @@
   transition: 0.5s;
 }
 
+/* -----------------------------------------Apps----------------------------------------- */
+.apps {
+  margin-bottom: 50px;
+}
+
+.apps .row {
+  justify-content: space-between;
+}
+.apps .col {
+  height: 300px;
+
+  overflow: hidden;
+}
+.apps-detail {
+  text-align: center;
+  box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  height: 100%;
+  background-color: blanchedalmond;
+}
+.apps-detail:hover {
+  transform: scale(1.05);
+}
+.app-image {
+  height: 150px;
+  overflow: hidden;
+}
+
 /*-------------------------------------------- SECTION message -----------------------------------------*/
 .my-message {
   margin-bottom: 50px;
@@ -519,77 +547,6 @@ input {
 
   width: 130px;
   height: 40px;
-}
-
-/*------------------------------------------------SECTION: Link----------------------------------------*/
-.link {
-  margin-top: 50px;
-}
-
-.link .row {
-  display: flex;
-  justify-content: space-between;
-
-  min-height: 250px;
-
-  color: white;
-
-  padding-top: 30px;
-}
-
-.link-social {
-  display: flex;
-  flex-direction: column;
-}
-
-.link-social a {
-  margin-bottom: 10px;
-  text-decoration: none;
-  color: white;
-}
-
-.link-social__icon {
-  margin-right: 7px;
-}
-.video .row {
-  display: flex;
-  justify-content: space-around;
-}
-
-.news-search {
-  position: relative;
-  width: 70px;
-  height: 50px;
-
-  margin: auto;
-  text-align: center;
-}
-.news-search i {
-  position: absolute;
-  top: 30%;
-  left: 30%;
-}
-.news-search input {
-  border-radius: 30%;
-  width: 100%;
-  height: 100%;
-
-  font-size: 2rem;
-  margin: 0;
-}
-
-.news-search:hover {
-  width: 500px;
-
-  border-radius: 5px;
-  transition: 0.5s;
-}
-.news-search:hover input {
-  border-radius: 10px;
-}
-.news-search:hover i {
-  top: 25%;
-  left: 0;
 }
 
 /*--------------------------------------------- Responsive breakpoint ---------------------------------------*/

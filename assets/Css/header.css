@@ -2,12 +2,12 @@
 header {
   position: sticky;
   position: -webkit-sticky;
-  top: 0; 
+  top: 0;
   z-index: 100;
   overflow: hidden;
-  box-shadow: 0 1px 2px lightgray;
-  
-  
+  -webkit-box-shadow: 0px 9px 17px -5px rgba(138, 128, 138, 1);
+  -moz-box-shadow: 0px 9px 17px -5px rgba(138, 128, 138, 1);
+  box-shadow: 0px 9px 17px -5px rgba(138, 128, 138, 1);
 }
 .main-header {
   height: 60px;
@@ -21,7 +21,7 @@ header {
 .main-header__intro {
   display: flex;
 }
-.main-header__intro a{
+.main-header__intro a {
   text-decoration: none;
 }
 .intro-logo > img {
@@ -46,12 +46,12 @@ header {
   color: white;
 }
 
-.nav__link{
+.nav__link {
   display: flex;
-  
-  height: 100%;;
+
+  height: 100%;
 }
-.nav__link > a{
+.nav__link > a {
   text-decoration: none;
   border-left: 1px solid lightgrey;
   text-align: center;
@@ -75,7 +75,7 @@ header {
 .fas {
   margin-right: 5px;
 }
-.nav__overlay{
+.nav__overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -86,10 +86,10 @@ header {
   display: none;
 }
 
-.nav-mobile-res{
+.nav-mobile-res {
   display: flex;
   flex-direction: column;
-  background-color:black;
+  background-color: black;
 
   position: fixed;
   top: 0;
@@ -99,11 +99,11 @@ header {
   width: 300px;
 
   padding-top: 50px;
- 
+
   transform: translateX(100%);
   transition: all 0.5s;
 }
-.nav-mobile-res >a{
+.nav-mobile-res > a {
   font-weight: bold;
   font-size: 1rem;
   color: white;
@@ -112,18 +112,17 @@ header {
 
   margin: 10px 20px;
 }
-.nav-mobile__close{
+.nav-mobile__close {
   color: white;
 
   position: absolute;
   top: 0.5rem;
   right: 1rem;
 }
-.nav-btn-2{
+.nav-btn-2 {
   color: white;
 
   position: absolute;
   top: 0.5rem;
   left: 1rem;
 }
-
