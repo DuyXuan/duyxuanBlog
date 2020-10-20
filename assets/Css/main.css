@@ -56,9 +56,7 @@ a {
   cursor: pointer;
   transition: 0.5s;
 }
-button:hover {
-  background-color: #60b543;
-}
+
 img {
   max-width: 100%;
 }
