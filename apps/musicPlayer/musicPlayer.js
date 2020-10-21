@@ -97,6 +97,46 @@ const songs = [
     displayName: "Em gái mưa",
     artist: "Hương Tràm",
   },
+  {
+    name: "i_belong_to_you",
+    displayName: "i_belong_to_you",
+    artist: "unknown",
+  },
+  {
+    name: "lovely",
+    displayName: "lovely",
+    artist: "unknown",
+  },
+  {
+    name: "tuy_am",
+    displayName: "tuy_am",
+    artist: "unknown",
+  },
+  {
+    name: "yeu_mot_nguoi_co_le",
+    displayName: "yeu_mot_nguoi_co_le",
+    artist: "unknown",
+  },
+  {
+    name: "so_much_more_than_this",
+    displayName: "so_much_more_than_this",
+    artist: "unknown",
+  },
+  {
+    name: "can't_break",
+    displayName: "can't_break",
+    artist: "unknown",
+  },
+  {
+    name: "not_today",
+    displayName: "not_today",
+    artist: "unknown",
+  },
+  {
+    name: "phoenix",
+    displayName: "phoenix",
+    artist: "unknown",
+  },
 ];
 
 // Check if Playing
@@ -126,7 +166,7 @@ function loadSong(song) {
   title.textContent = song.displayName;
   artist.textContent = song.artist;
   music.src = `music/${song.name}.mp3`;
-  image.src = `img/${song.name}.jpg`;
+  // image.src = `img/${song.name}.jpg`;
 }
 
 // Current Song
