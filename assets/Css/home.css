@@ -200,22 +200,23 @@
 }
 .apps .col {
   height: 300px;
-
-  overflow: hidden;
+  padding: 10px;
 }
 .apps-detail {
   text-align: center;
   box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.1);
   transition: 0.5s;
   height: 100%;
-  background-color: blanchedalmond;
+  background-color: #f5f5f5;
+  border: 1px solid lightgray;
+  border-radius: 10px;
 }
 .apps-detail:hover {
   transform: scale(1.05);
 }
-.app-image {
-  height: 150px;
-  overflow: hidden;
+
+.apps-icon {
+  margin-top: 50px;
 }
 
 /*-------------------------------------------- SECTION message -----------------------------------------*/
