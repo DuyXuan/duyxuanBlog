@@ -155,10 +155,6 @@
   padding-bottom: 30px;
 }
 
-.news__top3-post .col:hover {
-  box-shadow: 1px;
-}
-
 .news__top3-post .post-detail {
   padding: 35px;
   transition: 0.5s;
@@ -178,9 +174,7 @@
   overflow: hidden;
   margin: auto;
 }
-.post-detail__image > img:hover {
-  transform: scale(1.05);
-}
+
 .post-detail__image > img {
   border-radius: 3px;
 

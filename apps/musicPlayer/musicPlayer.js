@@ -137,6 +137,11 @@ const songs = [
     displayName: "phoenix",
     artist: "unknown",
   },
+  {
+    name: "let_me_down_slowly",
+    displayName: "let me down slowly",
+    artist: "unknown",
+  },
 ];
 
 // Check if Playing

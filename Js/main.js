@@ -1,19 +1,17 @@
 //Digital clock
-import digitalClock from '../Js/digitalClock.js';
+import digitalClock from "../Js/digitalClock.js";
 setInterval(digitalClock, 1000);
 
-
-//header responsive menu Button 
-var menuBar = document.querySelector(".nav-btn");
+//header responsive menu Button
+const menuBar = document.querySelector(".nav-btn");
 menuBar.onclick = function () {
   document.querySelector(".nav-mobile-res").style.transform = "translateX(0)";
 };
 
-document.querySelector(".nav-mobile__close").onclick = function () {
+document.querySelector(".nav-mobile__close").onclick = () => {
   document.querySelector(".nav-mobile-res").style.transform =
     "translateX(100%)";
 };
-
 
 //Display top 3 post in news section with javascript(create for practice javascript using innerHTML and Object)
 var postDetail = document.querySelectorAll(".post-detail");
@@ -56,7 +54,7 @@ var post3 = new news(
     "Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit.",
   "Image/news.png"
 );
-var postList = [post,post2,post3];
+var postList = [post, post2, post3];
 var postImage = document.querySelectorAll(".post-detail__image > img");
 var postDescription = document.querySelectorAll(".post-detail__desc >p");
 var postTittle = document.querySelectorAll(".post-detail__tittle>p");
@@ -66,22 +64,18 @@ for (var i = 0; i < 3; i++) {
   postTittle[i].innerText = postList[i].tittle;
 }
 
-
-
 //form Validate
 var submitBtn = document.querySelector(".submit-btn");
-import  validator from '../Js/Validator.js';
-submitBtn.addEventListener("click", function () {
+import validator from "../Js/Validator.js";
+submitBtn.addEventListener("click", () => {
   validator.checkEmpty(),
-  validator.checkName(),
-  validator.checkEmail(),
-  validator.checkPhone()
+    validator.checkName(),
+    validator.checkEmail(),
+    validator.checkPhone();
 });
 
-
-
 //onclick navigator link
-document.querySelectorAll(".nav__blog").forEach(function (element) {
+document.querySelectorAll(".nav__blog").forEach((element) => {
   element.onclick = function () {
     window.scroll({
       top: document.querySelector(".news").offsetTop,
@@ -90,7 +84,7 @@ document.querySelectorAll(".nav__blog").forEach(function (element) {
   };
 });
 
-document.querySelectorAll(".nav__about").forEach(function (element) {
+document.querySelectorAll(".nav__about").forEach((element) => {
   element.onclick = function () {
     window.scroll({
       top: document.querySelector(".message-2").offsetTop,
@@ -99,7 +93,7 @@ document.querySelectorAll(".nav__about").forEach(function (element) {
   };
 });
 
-document.querySelectorAll(".nav__gallery").forEach(function (element) {
+document.querySelectorAll(".nav__gallery").forEach((element) => {
   element.onclick = function () {
     window.scroll({
       top: document.querySelector(".gallery").offsetTop,
@@ -108,7 +102,7 @@ document.querySelectorAll(".nav__gallery").forEach(function (element) {
   };
 });
 
-document.querySelectorAll(".nav__contact").forEach(function (element) {
+document.querySelectorAll(".nav__contact").forEach((element) => {
   element.onclick = function () {
     window.scroll({
       top: document.querySelector(".contact").offsetTop,
@@ -139,3 +133,15 @@ function scrollToTop() {
     scrollTop.style.display = "none";
   }
 }
+
+//onscroll animation:
+// window.addEventListener("scroll", function (e) {
+//   if (
+//     document.body.scrollTop > 100 ||
+//     document.documentElement.scrollTop > 100
+//   ) {
+//     document.querySelector("header").classList.add("header-animation");
+//   } else {
+//     document.querySelector("header").classList.remove("header-animation");
+//   }
+// });
