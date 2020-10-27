@@ -60,29 +60,56 @@
 
 
       <main>
-        <div class="player-container">
-            <!-- Song -->
-            <div class="img-container">
-              <i class="fas fa-music fa-6x"></i>
-            </div>
-            <h2 id="title">Electric Chill Machine</h2>
-            <h3 id="artist">Jacinto</h3>
-            <audio src="music/hon_ca_yeu.mp3"></audio>
-            <!-- Progress -->
-            <div class="progress-container" id="progress-container">
-              <div class="progress" id="progress"></div>
-              <div class="duration-wrapper">
-                <span id="current-time">0:00</span>
-                <span id="duration">2:06</span>
+        <section class="music">
+          <div class="container">
+
+            <div class="row">
+              <div class="col l-5"><div class="menu">
+                <h2 class="tittle">Music player application</h2>
+                <ul class="music-list">
+   
+                </ul>
+              </div></div>
+              <div class="col l-7 player">
+                <div class="player-container">
+                  <!-- Song -->
+                  <div class="img-container">
+                    <img class="song-image" alt="">
+                  </div>
+                  <h2 id="title">Electric Chill Machine</h2>
+                  <h3 id="artist">Jacinto</h3>
+                  <audio src="music/hon_ca_yeu.mp3"></audio>
+                  <!-- Progress -->
+                  <div class="progress-container" id="progress-container">
+                    <div class="progress" id="progress"></div>
+                    <div class="duration-wrapper">
+                      <span id="current-time">0:00</span>
+                      <span id="duration">2:06</span>
+                    </div>
+                  </div>
+                 
+                  <!-- Controls -->
+                  <div class="player-controls">
+                    <i class="fas fa-backward" id="prev" title="Previous"></i>
+                    <i class="fas fa-play main-button" id="play" title="Play"></i>
+                    <i class="fas fa-forward" id="next" title="Next"></i>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- Controls -->
-            <div class="player-controls">
-              <i class="fas fa-backward" id="prev" title="Previous"></i>
-              <i class="fas fa-play main-button" id="play" title="Play"></i>
-              <i class="fas fa-forward" id="next" title="Next"></i>
-            </div>
+
           </div>
+         
+          
+
+
+
+
+
+   
+        </section>
+
+     
       </main>
 
       

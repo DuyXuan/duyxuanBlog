@@ -20,7 +20,7 @@
 
 /*------------------------------------------------SECTION: Link----------------------------------------*/
 .link {
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 
 .link .row {
@@ -87,4 +87,9 @@
 .news-search:hover i {
   top: 25%;
   left: 0;
+}
+
+.footer-info {
+  margin: 0;
+  padding-top: 15px;
 }

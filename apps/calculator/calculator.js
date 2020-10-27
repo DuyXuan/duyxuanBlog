@@ -21,8 +21,8 @@ const btnMulti = document.querySelector(".btn__multi");
 const btnPercent = document.querySelector(".btn__percent");
 const btnSqrt = document.querySelector(".btn__sqrt");
 const btnEqual = document.querySelector(".btn__equal");
-// const varName = document.querySelector('.btn__CE');
-// const varName = document.querySelector('.btn__CE');
+const btnDot = document.querySelector(".btn__dot");
+const btnSwap = document.querySelector(".btn__swap");
 // const varName = document.querySelector('.btn__CE');
 
 var ready = true;
@@ -67,23 +67,38 @@ function buttonAction() {
   });
   btnAdd.addEventListener("click", function (e) {
     num1 = getCurrentText();
-    add();
+    setOperator("add");
   });
   btnSub.addEventListener("click", function (e) {
     num1 = getCurrentText();
-    sub();
+    setOperator("sub");
   });
   btnMulti.addEventListener("click", function (e) {
     num1 = getCurrentText();
-    multi();
+    setOperator("multi");
   });
   btnDiv.addEventListener("click", function (e) {
-    num1 = getCurrentText();
-    div();
+    num1 = Number(getCurrentText());
+
+    setOperator("div");
   });
-  btnEqual.addEventListener("click", function (e) {
-    calculator(num1);
+  btnSqrt.addEventListener("click", function (e) {
+    num1 = getCurrentText();
+    result = sqrt(num1);
     setText(result);
+  });
+  btnDot.addEventListener("click", function (e) {
+    num1 = getCurrentText();
+    setText(addDot(num1));
+  });
+  btnSwap.addEventListener("click", function (e) {
+    setText(swap(getCurrentText()));
+  });
+
+  btnEqual.addEventListener("click", function (e) {
+    calculate(num1);
+    setText(result);
+    operator = "";
   });
 }
 buttonAction();
@@ -105,46 +120,44 @@ function setNumber(btn) {
     setText(getCurrentText() + btn.textContent);
   }
 }
-
-function add() {
-  if (ready) {
-    operator = "add";
+function sqrt(number) {
+  if (number < 0) {
     return;
   }
-  operator = "add";
+  return Math.sqrt(number);
+}
+function addDot(number) {
+  if (!number.includes(".") && ready == false) {
+    ready = false;
+    return (number += ".");
+  }
+  if (ready == true) {
+    number = "0.";
+    ready = false;
+
+    return number;
+  }
+  return number;
+}
+function swap(number) {
+  if (number.includes("-")) {
+    return number.replace("-", "");
+  } else {
+    return "-" + number;
+  }
+}
+
+function setOperator(button) {
+  if (ready) {
+    operator = button;
+    return;
+  }
+  operator = button;
 
   ready = true;
 }
-function sub() {
-  if (ready) {
-    operator = "sub";
-    return;
-  }
-  operator = "sub";
 
-  ready = true;
-}
-
-function multi() {
-  if (ready) {
-    operator = "multi";
-    return;
-  }
-  operator = "multi";
-
-  ready = true;
-}
-function div() {
-  if (ready) {
-    operator = "div";
-    return;
-  }
-  operator = "div";
-
-  ready = true;
-}
-
-function calculator(num1) {
+function calculate(num1) {
   num2 = Number(getCurrentText());
   if (operator == "add") {
     result = Number(num1) + Number(num2);
@@ -153,14 +166,14 @@ function calculator(num1) {
   } else if (operator == "multi") {
     result = Number(num1) * Number(num2);
   } else if (operator == "div") {
-    if (num1 == 0) {
+    if (num2 == 0) {
       setText("can't div by 0");
     } else {
       result = Number(num1) / Number(num2);
     }
   } else {
-    result = getCurrentNumber();
+    result = getCurrentText();
   }
-  // setText(result);
+  setText(result);
   ready = true;
 }

@@ -171,7 +171,7 @@ function loadSong(song) {
   title.textContent = song.displayName;
   artist.textContent = song.artist;
   music.src = `music/${song.name}.mp3`;
-  // image.src = `img/${song.name}.jpg`;
+  image.src = `img/${song.name}.jpg`;
 }
 
 // Current Song
@@ -241,3 +241,51 @@ nextBtn.addEventListener("click", nextSong);
 music.addEventListener("ended", nextSong);
 music.addEventListener("timeupdate", updateProgressBar);
 progressContainer.addEventListener("click", setProgressBar);
+
+//play when click
+const songName = document.querySelector(".song-name");
+const songMenu = document.querySelector(".music-list");
+const songImage = document.querySelector(".song-img");
+
+//add song to menu
+
+(function add() {
+  for (let i = 0; i < songs.length; i++) {
+    let newSong = document.createElement("li");
+    newSong.innerHTML = `<div class="song-img">
+  <img src= "img/${songs[i].name}.jpg" alt="">
+  </div>
+  <div class="song-detail">
+  <h4 class="song-name">${songs[i].name}</h4>
+  <p class="song-author">${songs[i].artist}</p>
+  </div>`;
+    songMenu.appendChild(newSong);
+  }
+})();
+
+(function SongMenuAction() {
+  const listItem = document.querySelectorAll(".music ul li");
+  for (let i = 0; i < listItem.length; i++) {
+    // listItem[i].index = i;
+
+    listItem[i].addEventListener(
+      "click",
+      function (e) {
+        loadSong(songs[i]);
+        playSong();
+      },
+      false
+    );
+  }
+})();
+
+//if image url not exits then set default image
+(function defaultImage() {
+  const image = document.querySelectorAll(".music img");
+  for (let i = 0; i < image.length; i++) {
+    image[i].onerror = function () {
+      this.onerror = null;
+      this.src = "img/default.jpg";
+    };
+  }
+})();
