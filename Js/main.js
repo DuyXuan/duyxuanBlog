@@ -145,3 +145,5 @@ function scrollToTop() {
 //     document.querySelector("header").classList.remove("header-animation");
 //   }
 // });
+
+// get json
