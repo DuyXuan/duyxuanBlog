@@ -134,16 +134,18 @@ function scrollToTop() {
   }
 }
 
-//onscroll animation:
-// window.addEventListener("scroll", function (e) {
-//   if (
-//     document.body.scrollTop > 100 ||
-//     document.documentElement.scrollTop > 100
-//   ) {
-//     document.querySelector("header").classList.add("header-animation");
-//   } else {
-//     document.querySelector("header").classList.remove("header-animation");
-//   }
-// });
+// display gallery image
+const gallery = document.querySelectorAll(".gallery__image");
+const galleryPopup = document.querySelector(".gallery-popup");
+const galleryExit = document.querySelector(".gallery-popup .exit-icon");
 
-// get json
+for (const item of gallery) {
+  item.addEventListener("click", function (e) {
+    galleryPopup.style.display = "block";
+  });
+}
+galleryExit.addEventListener("click", function (e) {
+  galleryPopup.style.display = "none";
+});
+
+//carousel
