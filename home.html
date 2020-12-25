@@ -13,12 +13,20 @@
     crossorigin="anonymous"
   ></script>
     <!-- favicon -->
+  
     <link rel="icon" type="image/png" href="Image/maple-leaf.png"/>
+
+    <!-- carousel lib -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" />
+    
     <link rel="stylesheet" href="assets/Css/home.css" />
     <link rel="stylesheet" href="assets/Css/header.css" />
     <link rel="stylesheet" href="assets/Css/footer.css" />
     <link rel="stylesheet" href="assets/Css/main.css" />
     <link rel="stylesheet" href="assets/Css/grid.css">
+   
   </head>
   <body>
     <!--------------------------------------------- HEADER ----------------------------------------------->
@@ -139,20 +147,9 @@
         </div>
         <div class="row row-2">
             <div class="container">
-              <div class="news__top3-post">
+              <div class="news__top3-post slider" >
               <div class="row">
-                <div class="col l-4">
-                  <div class="post-detail">                                    
-                  </div>
-                </div>
-                <div class="col l-4">
-                  <div class="post-detail">                                    
-                  </div>
-                </div>
-                <div class="col l-4">
-                  <div class="post-detail">                            
-                  </div>
-                </div>
+               
               </div>     
             </div>
           </div>
@@ -256,7 +253,7 @@
             <div class="skill__tittle">
               <h2>Skills</h2>
             </div>
-            <div class="col l-3 m-6 c-6 ">
+            <div class="col l-3 m-6 c-6 " >
               <div class="skill-detail">
                 <div class="skill-detail__background">
                   <i class="fab fa-html5 fa-4x"></i>
@@ -356,7 +353,7 @@
             <h2>My life adventure</h2>
           </div>
           <div class="row">
-            <div class="col l-3 m-6">
+            <div class="col l-3 m-6" >
               <div class="gallery__image ">             
                 <img src="Image/dn.jpg" alt="">  
                 <div class="image-info">
@@ -444,7 +441,7 @@
                 <div class="container">
                   <i class="fas fa-times fa-3x exit-icon"></i>
                 
-                  <ul class="gallery-list">
+                  <ul class="gallery-list " >
                     <li><img src="Image/img4.jpg" alt=""></li>
                     <li><img src="Image/goals.jpeg" alt=""></li>
                     <li><img src="Image/ha long.jpg" alt=""></li>
@@ -484,7 +481,7 @@
        </div>
         <div class="container">    
           <div class="row row-2 ">
-            <div class="col l-6 m-6">
+            <div class="col l-6 m-6 c-12">
               <div class="contact__intro">
                 <div class="icon">
                   <i class="far fa-envelope fa-6x"></i>
@@ -507,7 +504,7 @@
                 </div>              
               </div>
             </div>
-            <div class="col l-6 m-6">
+            <div class="col l-6 m-6 c-12">
              <div class="contact__form">
               
                <div class="form-tbl"> 
@@ -618,7 +615,8 @@
       </section>      
     </footer>
     <script type="module" src="Js/main.js"></script>
-
+    <!-- <script src="Js/postRender.js"></script> -->
+   
    
   </body>
 </html>

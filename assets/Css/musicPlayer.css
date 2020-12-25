@@ -1,12 +1,10 @@
 /* Images created by: https://unsplash.com/@pawel_czerwinski */
 
-@import url("https://fonts.googleapis.com/css?family=Spartan:400,700&display=swap");
-
 .player-container {
   height: 500px;
   width: 400px;
   background: #e7e7e7;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
   border: 1px solid #000;
   text-align: center;
@@ -93,23 +91,21 @@ h3 {
 }
 
 /* Media Query: iPhone (Vertical) */
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 425px) {
   .player-container {
-    width: 95vw;
+    width: 96vw;
   }
 
-  h2 {
-    font-size: 20px;
+  */ .music .container {
+    width: 100% !important;
   }
 
-  h3 {
-    font-size: 15px;
+  .music .row {
+    flex-direction: column-reverse !important;
   }
 
-  .player-controls {
-    top: -10px;
-    left: 56%;
-    transform: translateX(-50%);
+  .music .container {
+    width: 100% !important;
   }
 }
 

@@ -611,6 +611,16 @@ input {
   body {
     overflow: hidden;
   }
+  .contact .container,
+  .skill .container {
+    width: 100%;
+  }
+  .news .container {
+    width: 90%;
+  }
+  .my-message__detail {
+    padding: 0;
+  }
 }
 
 /* tablet: width >= 740px and width <1024px */

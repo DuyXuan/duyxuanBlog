@@ -1,89 +1,26 @@
 {
   "songs": [
     {
-      "name": "hon_ca_yeu",
-      "displayName": "Hơn cả yêu",
-      "artist": "Đức Phúc",
-      "id": 1
-    },
-    {
-      "name": "anh_nang_cua_anh",
-      "displayName": "Ánh nắng của anh",
-      "artist": "Phúc ",
-      "id": 2
-    },
-    {
-      "name": "noi_nay_co_anh",
-      "displayName": "Nơi này có anh",
-      "artist": "Sếp Tùng ",
-      "id": 4
-    },
-    {
-      "name": "chac_ai_do_se_ve",
-      "displayName": "Chắc ai đó sẽ về",
-      "artist": "Sếp Tùng ",
-      "id": 5
-    },
-    {
       "name": "my_everything",
       "displayName": "My Everything",
       "artist": "Tiên Tiên",
       "id": 6
     },
-    {
-      "name": "say_you_do",
-      "displayName": "Say you do",
-      "artist": "Tiên Tiên",
-      "id": 7
-    },
-    {
-      "name": "vi_ai_vi_anh",
-      "displayName": "Vì ai vì anh",
-      "artist": "Đông Nhi",
-      "id": 10
-    },
+
     {
       "name": "dau_mua",
       "displayName": "Dấu mưa",
       "artist": "Trung Quân idol",
       "id": 11
     },
-    {
-      "name": "trot_yeu",
-      "displayName": "Trót yêu",
-      "artist": "Trung Quân idol",
-      "id": 12
-    },
+
     {
       "name": "nguoi_la_oi",
       "displayName": "Người lạ ơi",
       "artist": "Superbrothers x Karik x Orange",
       "id": 13
     },
-    {
-      "name": "phia_sau_mot_co_gai",
-      "displayName": "Phía sau một cô gái",
-      "artist": "Soobin Hoàng Sơn",
-      "id": 14
-    },
-    {
-      "name": "yeu_5",
-      "displayName": "Yêu 5",
-      "artist": "Rhymastic",
-      "id": 15
-    },
-    {
-      "name": "nguoi_ay",
-      "displayName": "Người ấy",
-      "artist": "Trịnh Thăng Bình",
-      "id": 16
-    },
-    {
-      "name": "em_gai_mua",
-      "displayName": "Em gái mưa",
-      "artist": "Hương Tràm",
-      "id": 17
-    },
+
     {
       "name": "i_belong_to_you",
       "displayName": "i belong to you",
@@ -155,6 +92,145 @@
       "displayName": "More",
       "artist": "KDA",
       "id": 30
+    },
+    {
+      "name": "umbrella",
+      "displayName": "Umbrella",
+      "artist": "ember_island ",
+      "id": 31
+    },
+    {
+      "name": "villain",
+      "displayName": "villain",
+      "artist": "KDA",
+      "id": 32
+    },
+    {
+      "name": "so_far_away",
+      "displayName": "So Far Away",
+      "artist": "Adam Christopher",
+      "id": 33
+    },
+    {
+      "name": "in_my_blood",
+      "displayName": "In My Blood",
+      "artist": "Shawn Mendes",
+      "id": 34
+    },
+    {
+      "name": "way_back_home",
+      "displayName": "Way Back Home",
+      "artist": "Shaun",
+      "id": 35
+    }
+  ],
+  "post": [
+    {
+      "id": 1,
+      "tittle": "post 1",
+      "imageUrl": "Image/news.png",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quaerat soluta in necessitatibus quam!Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit."
+    },
+    {
+      "id": 2,
+      "tittle": "post 2",
+      "imageUrl": "Image/news.png",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quaerat soluta in necessitatibus quam!Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit."
+    },
+    {
+      "id": 3,
+      "tittle": "post 3",
+      "imageUrl": "Image/news.png",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Quaerat soluta in necessitatibus quam!Itaque exercitationem accusamus iste quis minus reiciendis nam magni? Reprehenderit."
+    }
+  ],
+  "about": [
+    {
+      "skill": [
+        {
+          "name": "Html 5"
+        },
+        {
+          "name": "Css 3"
+        },
+        {
+          "name": "JavaSCript"
+        },
+        {
+          "name": "Sass"
+        },
+        {
+          "name": "Bootstrap 4"
+        },
+        {
+          "name": "Angular"
+        },
+        {
+          "name": "Html 5"
+        },
+        {
+          "name": "Html 5"
+        }
+      ],
+      "gallery": [
+        {
+          "name": "Da Nang",
+          "description": "",
+          "gallery": [
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            },
+            {
+              "url": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "link": [
+    {
+      "contact": [
+        { "name": "facebook", "url": "" },
+        { "name": "twitter", "url": "" },
+        { "name": "instagram", "url": "" }
+      ],
+      "useFullLink": []
+    }
+  ],
+  "message": [
+    {
+      "intro message": [
+        {
+          "title": "Hello and Welcome"
+        },
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+        }
+      ],
+      "about message": [
+        {
+          "title": "My future goals"
+        },
+        {
+          "content": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim."
+        }
+      ]
     }
   ]
 }
