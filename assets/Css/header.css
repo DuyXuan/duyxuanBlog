@@ -1,6 +1,6 @@
 /*header*/
 header {
-  position: sticky;
+  position: fixed;
   position: -webkit-sticky;
   top: 0;
   width: 100%;
